@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wings Of Phoenix | Members</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body onload="loadVideo(0)">
+    <header id="inner-header">
+      <!-- Navbar -->
+      <nav id="navbar">
+        <img class="logo" src="./img/logo.png" alt="" />
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="team.html">Our Members</a></li>
+          <li><a href="gameplay.html">Gameplay</a></li>
+          <li><a href="achievements.html">Achievements</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="bottom-line"></div>
+    </header>
+
+    <div class="video-container">
+      <video id="backgroundVideo" autoplay muted loop playsinline>
+        <source src="../dist/img/gameplay/league.mp4" type="video/mp4" />
+        Your Browser does not support video tag
+      </video>
+      <div id="video-embed-container">
+        <iframe
+          id="video-embed"
+          width="560"
+          height="315"
+          src=""
+          frameborder="0"
+          allow="autoplay; encrypted media"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <button class="btn btn-primary prev-arrow" onclick="prevVideo()">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="btn btn-primary next-arrow" onclick="nextVideo()">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="overlay"></div>
+      <button
+        id="unmuteButton"
+        class="overlay-button btn-primary"
+        onclick="unmuteVideo()"
+      >
+        <i class="fas fa-volume-mute"></i> Unmute Video
+      </button>
+    </div>
+
+    <footer>
+      <img src="../dist/img/logo5.png" alt="" />
+      <h2>Wings Of Phoenix</h2>
+    </footer>
+    <script src="./js/gameplay.js"></script>
+  </body>
+</html>
