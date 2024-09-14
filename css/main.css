@@ -116,6 +116,125 @@ span {
   padding: 10px 5px;
   border: none; }
 
+#navbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center; }
+  #navbar .menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+    #navbar .menu-wrap .toggler {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2; }
+    #navbar .menu-wrap .hamburger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+      padding: 1rem;
+      background-color: rgba(46, 7, 63, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #navbar .menu-wrap .hamburger > div {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        display: flex;
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.4s ease; }
+        #navbar .menu-wrap .hamburger > div:before, #navbar .menu-wrap .hamburger > div:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          z-index: 1;
+          background: inherit;
+          top: -10px; }
+        #navbar .menu-wrap .hamburger > div:after {
+          top: 10px; }
+    #navbar .menu-wrap .toggler:checked + .hamburger > div {
+      transform: rotate(135deg); }
+    #navbar .menu-wrap .toggler:checked + .hamburger > div:before,
+    #navbar .menu-wrap .toggler:checked + .hamburger > div:after {
+      top: 0;
+      transform: rotate(90deg); }
+    #navbar .menu-wrap .toggler:checked:hover + .hamburger > div {
+      transform: rotate(225deg); }
+    #navbar .menu-wrap .toggler:checked ~ .menu {
+      visibility: visible; }
+      #navbar .menu-wrap .toggler:checked ~ .menu > div {
+        transform: scale(1);
+        transition-duration: 0.75s; }
+        #navbar .menu-wrap .toggler:checked ~ .menu > div > div {
+          opacity: 1;
+          transition: opacity 0.4s 0.4s ease; }
+    #navbar .menu-wrap .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #navbar .menu-wrap .menu > div {
+        background-color: rgba(3, 3, 3, 0.87);
+        border-radius: 50%;
+        width: 200vw;
+        height: 200vh;
+        display: flex;
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: all 0.4s ease; }
+        #navbar .menu-wrap .menu > div > div {
+          max-width: 90vw;
+          max-height: 100vh;
+          text-align: center;
+          opacity: 0;
+          transition: opacity 0.4s ease; }
+          #navbar .menu-wrap .menu > div > div ul li {
+            color: #fff;
+            padding: 1rem;
+            font-size: 1.5rem; }
+            #navbar .menu-wrap .menu > div > div ul li a {
+              color: inherit;
+              transition: color 0.4s ease; }
+              #navbar .menu-wrap .menu > div > div ul li a:hover {
+                color: #ff739e; }
+
+#inner-header {
+  max-height: 20vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4); }
+  #inner-header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/inner-showcase.jpg") no-repeat center center/cover;
+    z-index: -1; }
+
 .items {
   position: relative;
   display: grid;
@@ -199,110 +318,6 @@ span {
     height: 100%;
     background: url("../img/showcase.png") no-repeat center center/cover;
     z-index: -1; }
-  #home-header #navbar {
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center; }
-    #home-header #navbar .menu-wrap {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1; }
-      #home-header #navbar .menu-wrap .toggler {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-        opacity: 0;
-        cursor: pointer;
-        z-index: 2; }
-      #home-header #navbar .menu-wrap .hamburger {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60px;
-        height: 60px;
-        z-index: 1;
-        padding: 1rem;
-        background-color: rgba(46, 7, 63, 0.4);
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        #home-header #navbar .menu-wrap .hamburger > div {
-          position: relative;
-          width: 100%;
-          height: 2px;
-          background: #fff;
-          display: flex;
-          flex: none;
-          justify-content: center;
-          align-items: center;
-          transition: all 0.4s ease; }
-          #home-header #navbar .menu-wrap .hamburger > div:before, #home-header #navbar .menu-wrap .hamburger > div:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            z-index: 1;
-            background: inherit;
-            top: -10px; }
-          #home-header #navbar .menu-wrap .hamburger > div:after {
-            top: 10px; }
-      #home-header #navbar .menu-wrap .toggler:checked + .hamburger > div {
-        transform: rotate(135deg); }
-      #home-header #navbar .menu-wrap .toggler:checked + .hamburger > div:before,
-      #home-header #navbar .menu-wrap .toggler:checked + .hamburger > div:after {
-        top: 0;
-        transform: rotate(90deg); }
-      #home-header #navbar .menu-wrap .toggler:checked:hover + .hamburger > div {
-        transform: rotate(225deg); }
-      #home-header #navbar .menu-wrap .toggler:checked ~ .menu {
-        visibility: visible; }
-        #home-header #navbar .menu-wrap .toggler:checked ~ .menu > div {
-          transform: scale(1);
-          transition-duration: 0.75s; }
-          #home-header #navbar .menu-wrap .toggler:checked ~ .menu > div > div {
-            opacity: 1;
-            transition: opacity 0.4s 0.4s ease; }
-      #home-header #navbar .menu-wrap .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        visibility: hidden;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        #home-header #navbar .menu-wrap .menu > div {
-          background-color: rgba(3, 3, 3, 0.87);
-          border-radius: 50%;
-          width: 200vw;
-          height: 200vh;
-          display: flex;
-          flex: none;
-          justify-content: center;
-          align-items: center;
-          transform: scale(0);
-          transition: all 0.4s ease; }
-          #home-header #navbar .menu-wrap .menu > div > div {
-            max-width: 90vw;
-            max-height: 100vh;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.4s ease; }
-            #home-header #navbar .menu-wrap .menu > div > div ul li {
-              color: #fff;
-              padding: 1rem;
-              font-size: 1.5rem; }
-              #home-header #navbar .menu-wrap .menu > div > div ul li a {
-                color: inherit;
-                transition: color 0.4s ease; }
-                #home-header #navbar .menu-wrap .menu > div > div ul li a:hover {
-                  color: #ff739e; }
   #home-header .container .header-content {
     height: 100%;
     font-size: 70px;
@@ -313,8 +328,6 @@ span {
       margin-top: 70px;
       line-height: 1;
       padding: 0; }
-  #home-header .container .header-btn {
-    margin: 6px auto; }
 
 #about-squad {
   background-color: rgba(0, 0, 0, 0.6);
@@ -382,146 +395,85 @@ span {
         border-radius: 15px;
         box-shadow: 7px 7px 10px #247006, -5px -5px 15px #247006; }
 
-#inner-header {
-  height: 15vh;
-  background: url("../img/showcase.png") no-repeat 50% 40%/cover; }
-  #inner-header #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    #inner-header #navbar ul {
-      display: flex; }
-      #inner-header #navbar ul li {
-        padding: 1.8rem 2rem; }
-        #inner-header #navbar ul li:hover {
-          background: #ff739e; }
-
-#members .video-background {
+#members {
   position: relative;
   height: 90vh;
-  width: 100%;
-  /* Ensures the container takes full width */
-  overflow: hidden;
-  /* Hides any overflow */ }
-  #members .video-background button.unmute {
-    position: absolute;
-    bottom: 5.9%;
-    /* Adjust as needed for vertical position */
-    left: 50%;
-    /* Centers the button horizontally */
-    transform: translateX(-50%);
-    /* Adjusts for the button's width to center it */
-    padding: 10px 20px; }
-
-#members .overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  /* Adjust text color */
-  font-size: 3rem;
-  /* Adjust font size */
-  text-shadow: 0 0 5px #ffbc00, 0 0 10px #ffbc00, 0 0 20px #ffbc00, 0 0 40px #ffbc00, 0 0 80px #ffbc00, 0 0 120px #ffbc00;
-  /* Add a shadow for readability */
-  z-index: 1;
-  /* Ensure the text is above the video */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
   text-align: center; }
+  #members:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/members/members-showcase.jpg") no-repeat center center/cover;
+    z-index: -1; }
 
-#members .overlay-button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  color: white;
-  /* Adjust text color */
-  /* Adjust font size */
-  z-index: 1;
-  /* Ensure the text is above the video */ }
-
-#members .video-background video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  /* Matches viewport width to prevent overflow */
-  height: 100%;
-  /* Ensures full height */
-  object-fit: cover;
-  /* Ensures the video fills the container */
-  z-index: -1; }
-
-#members .members-info ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  flex-direction: column;
-  grid-gap: 20px; }
-  #members .members-info ul li:has(> ul) {
+#members-info-section #members-info ul {
+  display: flex;
+  flex-direction: column; }
+  #members-info-section #members-info ul li > div {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: red;
-    padding: 30px; }
-    #members .members-info ul li:has(> ul):nth-child(1)::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url("../img/members/kagura.png") no-repeat center center/cover; }
-    #members .members-info ul li:has(> ul):nth-child(2)::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url("../img/members/hanabi.jpeg") no-repeat center center/cover; }
-    #members .members-info ul li:has(> ul):nth-child(3)::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url("../img/members/martis.jpg") no-repeat center center/cover; }
-    #members .members-info ul li:has(> ul):nth-child(4) ::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url("../img/members/dyroth.jpg") no-repeat center center/cover; }
-    #members .members-info ul li:has(> ul):nth-child(5)::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: url("../img/members/harith -hero.jpg") no-repeat center center/cover; }
-    #members .members-info ul li:has(> ul) ul {
-      display: flex;
-      flex-direction: column; }
-      #members .members-info ul li:has(> ul) ul li {
-        padding: 10px; }
-    #members .members-info ul li:has(> ul) img.avatar {
+    background-color: rgba(0, 0, 0, 0.5); }
+    #members-info-section #members-info ul li > div img.avatar {
       width: 200px;
       height: 200px;
       border-radius: 50%; }
-    #members .members-info ul li:has(> ul) img.hero {
-      display: none;
-      visibility: hidden;
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover; }
+  #members-info-section #members-info ul li:last-child div .avatar {
+    height: 180px; }
+  #members-info-section #members-info ul li:nth-child(1) div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/members/kagura.png") no-repeat center center/cover; }
+  #members-info-section #members-info ul li:nth-child(2) div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/members/hanabi.jpeg") no-repeat center center/cover; }
+  #members-info-section #members-info ul li:nth-child(3) div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/members/martis.jpg") no-repeat center center/cover; }
+  #members-info-section #members-info ul li:nth-child(4) div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/members/dyroth.jpg") no-repeat center center/cover; }
+  #members-info-section #members-info ul li:nth-child(5) div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/members/harith -hero.jpg") no-repeat center center/cover; }
 
 #contact {
   background: rgba(0, 0, 0, 0.6);
@@ -615,14 +567,14 @@ span {
     box-shadow: 5px 5px 10px black, -2px -2px 5px black; }
 
 footer {
-  background: #333; }
+  background: #2e073f; }
   footer .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
     footer .container h2 {
-      color: gray;
+      color: #ebd3f8;
       font-size: 2rem; }
     footer .container img {
       display: block;

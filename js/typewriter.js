@@ -7,7 +7,7 @@ function typeWords() {
   // Get the container where words will be displayed
   const container = document.getElementById("word-container");
 
-  let fontSize = 30; // Starting font size in pixels
+  let fontSize = 28; // Starting font size in pixels
   let currentWordIndex = 0; // Track the current word
   let currentLetterIndex = 0; // Track the letter of the current word
   let typingInterval; // Store the interval for typing speed

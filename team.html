@@ -25,180 +25,127 @@
   <body>
     <header id="inner-header">
       <!-- Navbar -->
+      <!-- Navbar -->
       <nav id="navbar">
+        <div class="menu-wrap">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger"><div></div></div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li><a href="index.html">About Us</a></li>
+                  <li><a href="team.html">Our Members</a></li>
+                  <li><a href="gameplay.html">Gameplay</a></li>
+                  <li><a href="achievements.html">Achievements</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <img class="logo" src="./img/logo.png" alt="" />
-        <ul>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="team.html">Our Members</a></li>
-          <li><a href="gameplay.html">Gameplay</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
       </nav>
+
       <div class="bottom-line"></div>
     </header>
 
     <section id="members">
-      <div class="video-background">
-        <video id="backgroundVideo" autoplay muted>
-          <source
-            src="../dist/img/gameplay/lv_0_20210514164219 (online-video-cutter.com).mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <h2 class="overlay-text">Meet Our Team</h2>
-        <button class="overlay-button btn btn-primary">
-          <a href="#members-info"><i class="fa-solid fa-arrow-down"></i></a>
-        </button>
-        <button
-          id="unmuteButton"
-          class="btn btn-primary unmute"
-          onclick="unmuteVideo()"
-        >
-          <i class="fas fa-volume-mute"></i> Unmute Video
+      <div class="container">
+        <h2 class="">Meet Our Team</h2>
+        <button class="btn btn-primary">
+          <a href="#members-info-section"
+            ><i class="fa-solid fa-arrow-down"></i
+          ></a>
         </button>
       </div>
-      <div id="members-info" class="members-info txt-center">
+    </section>
+    <section id="members-info-section">
+      <div id="members-info" class="txt-center">
         <ul>
-          <li class="kagura">
-            <ul>
-              <li>
-                <img
-                  class="avatar"
-                  src="../dist/img/members/phillia.jpg"
-                  alt=""
-                />
-              </li>
-              <li><h2>Philia &#128081;</h2></li>
-              <li>
-                <p>
-                  Role:Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quam molestiae accusantium iste eligendi blanditiis itaque.
-                  Corporis dolorem est temporibus adipisci alias reprehenderit
-                  non. Tenetur sint delectus quibusdam corrupti eum dolorum!
-                </p>
-              </li>
-              <li><p>Main Hero</p></li>
-              <li>
-                <img class="hero" src="../dist/img/members/kagura.png" alt="" />
-              </li>
-            </ul>
-          </li>
-          <li class="hanabi">
-            <ul>
-              <li>
-                <img
-                  class="avatar"
-                  src="../dist/img/members/cutespam.png"
-                  alt=""
-                />
-              </li>
-              <li><h2>Cute_Spam</h2></li>
-              <li>
-                <p>
-                  Role:Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quam molestiae accusantium iste eligendi blanditiis itaque.
-                  Corporis dolorem est temporibus adipisci alias reprehenderit
-                  non. Tenetur sint delectus quibusdam corrupti eum dolorum!
-                </p>
-              </li>
-              <li><p>Main Hero</p></li>
-              <li>
-                <img
-                  class="hero"
-                  src="../dist/img/members/hanabi.jpeg"
-                  alt=""
-                />
-              </li>
-            </ul>
+          <li>
+            <div>
+              <img class="avatar" src="./img/members/phillia.jpg" alt="" />
+              <h2>Philia &#128081;</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique deserunt provident animi necessitatibus id deleniti
+                aliquid quia aut, labore minus, placeat officiis? Reiciendis
+                delectus, voluptates tempora placeat illo veritatis! Nam.
+              </p>
+              <h4>Role:</h4>
+              <h4>Main Hero:</h4>
+            </div>
           </li>
 
-          <li class="martis">
-            <ul>
-              <li>
-                <img
-                  class="avatar"
-                  src="../dist/img/members/zelendris.png"
-                  alt=""
-                />
-              </li>
-              <li><h2>Zelendris</h2></li>
-              <li>
-                <p>
-                  Role:Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quam molestiae accusantium iste eligendi blanditiis itaque.
-                  Corporis dolorem est temporibus adipisci alias reprehenderit
-                  non. Tenetur sint delectus quibusdam corrupti eum dolorum!
-                </p>
-              </li>
-              <li><p>Main Hero</p></li>
-              <li>
-                <img class="hero" src="../dist/img/members/martis.jpg" alt="" />
-              </li>
-            </ul>
+          <li>
+            <div>
+              <img class="avatar" src="./img/members/cutespam.png" alt="" />
+              <h2>Cute_Spam</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique deserunt provident animi necessitatibus id deleniti
+                aliquid quia aut, labore minus, placeat officiis? Reiciendis
+                delectus, voluptates tempora placeat illo veritatis! Nam.
+              </p>
+              <h4>Role:</h4>
+              <h4>Main Hero:</h4>
+            </div>
           </li>
 
-          <li class="dyroth">
-            <ul>
-              <li>
-                <img
-                  class="avatar"
-                  src="../dist/img/members/dhunti.jpg"
-                  alt=""
-                />
-              </li>
-              <li><h2>Dhunti</h2></li>
-              <li>
-                <p>
-                  Role:Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quam molestiae accusantium iste eligendi blanditiis itaque.
-                  Corporis dolorem est temporibus adipisci alias reprehenderit
-                  non. Tenetur sint delectus quibusdam corrupti eum dolorum!
-                </p>
-              </li>
-              <li><p>Main Hero</p></li>
-              <li>
-                <img class="hero" src="../dist/img/members/dyroth.jpg" alt="" />
-              </li>
-            </ul>
+          <li>
+            <div>
+              <img class="avatar" src="./img/members/zelendris.png" alt="" />
+              <h2>Zelendris</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique deserunt provident animi necessitatibus id deleniti
+                aliquid quia aut, labore minus, placeat officiis? Reiciendis
+                delectus, voluptates tempora placeat illo veritatis! Nam.
+              </p>
+              <h4>Role:</h4>
+              <h4>Main Hero:</h4>
+            </div>
           </li>
 
-          <li class="harith">
-            <ul>
-              <li>
-                <img
-                  class="avatar"
-                  src="../dist/img/members/harith.jpg"
-                  alt=""
-                />
-              </li>
-              <li><h2>WIZARD_KING</h2></li>
-              <li>
-                <p>
-                  Role:Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quam molestiae accusantium iste eligendi blanditiis itaque.
-                  Corporis dolorem est temporibus adipisci alias reprehenderit
-                  non. Tenetur sint delectus quibusdam corrupti eum dolorum!
-                </p>
-              </li>
-              <li><p>Main Hero</p></li>
-              <li>
-                <img
-                  class="hero"
-                  src="../dist/img/members/harith -hero.jpg"
-                  alt=""
-                />
-              </li>
-            </ul>
+          <li>
+            <div>
+              <img class="avatar" src="./img/members/dhunti.jpg" alt="" />
+              <h2>Dhunti</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique deserunt provident animi necessitatibus id deleniti
+                aliquid quia aut, labore minus, placeat officiis? Reiciendis
+                delectus, voluptates tempora placeat illo veritatis! Nam.
+              </p>
+              <h4>Role:</h4>
+              <h4>Main Hero:</h4>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <img class="avatar" src="./img/members/harith -hero.jpg" alt="" />
+              <h2>WIZARD_KING</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique deserunt provident animi necessitatibus id deleniti
+                aliquid quia aut, labore minus, placeat officiis? Reiciendis
+                delectus, voluptates tempora placeat illo veritatis! Nam.
+              </p>
+              <h4>Role:</h4>
+              <h4>Main Hero:</h4>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
     <footer>
-      <img src="../dist/img/logo5.png" alt="" />
-      <h2>Wings Of Phoenix</h2>
+      <div class="container">
+        <img src="./img/logo5.png" alt="" />
+        <h2>Wings Of Phoenix</h2>
+      </div>
     </footer>
     <!-- TypeEffect Script -->
     <script src="./js/video.js"></script>
