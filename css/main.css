@@ -469,7 +469,8 @@ span {
   #contact form {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin: 2rem 0; }
     #contact form input {
       display: block;
       opacity: 0.6;
