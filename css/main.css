@@ -14,6 +14,9 @@ h2 {
   color: #ffbc00;
   font-size: 40px; }
 
+h4 {
+  color: #cb80ab; }
+
 li {
   list-style: none; }
 
@@ -231,18 +234,9 @@ span {
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 0.9rem;
-  margin: 0 50px 0 50px; }
-  .items::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: calc(49.6% + 0px);
-    width: 7px;
-    background-color: #36454f;
-    box-shadow: 0 0 10px #36454f, 0 0 20px #36454f, 0 0 30px #36454f, 0 0 40px #36454f;
-    /* Creates the neon glow effect */ }
+  grid-gap: 1.2rem; }
+  .items h4 {
+    color: #fdaf7b; }
 
 .item {
   position: relative;
@@ -295,7 +289,8 @@ span {
     transform: translateY(-50%); }
     .item .text-wrap h2 {
       font-family: "Dancing Script", cursive;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 1.5rem; }
 
 #home-header {
   background: rgba(0, 0, 0, 0.6);
@@ -357,8 +352,7 @@ span {
               border-radius: 50%; }
           #about-squad .squad-info ul li .member .member-about {
             font-size: 1.1rem;
-            justify-self: center;
-            align-self: center;
+            text-align: left;
             padding-left: 1.5rem; }
 
 #gameplay {
@@ -419,8 +413,6 @@ span {
       width: 200px;
       height: 200px;
       border-radius: 50%; }
-  #members-info-section #members-info ul li:last-child div .avatar {
-    height: 180px; }
   #members-info-section #members-info ul li:nth-child(1) div::before {
     content: "";
     position: absolute;
@@ -429,7 +421,7 @@ span {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url("../img/members/kagura.png") no-repeat center center/cover; }
+    background: url("../img/members/kagura.png") no-repeat 28% center/cover; }
   #members-info-section #members-info ul li:nth-child(2) div::before {
     content: "";
     position: absolute;
@@ -438,7 +430,7 @@ span {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url("../img/members/hanabi.jpeg") no-repeat center center/cover; }
+    background: url("../img/members/hanabi.jpeg") no-repeat 88% center/cover; }
   #members-info-section #members-info ul li:nth-child(3) div::before {
     content: "";
     position: absolute;
@@ -447,7 +439,7 @@ span {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url("../img/members/martis.jpg") no-repeat center center/cover; }
+    background: url("../img/members/martis.jpg") no-repeat 39% center/cover; }
   #members-info-section #members-info ul li:nth-child(4) div::before {
     content: "";
     position: absolute;
@@ -465,7 +457,7 @@ span {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url("../img/members/harith -hero.jpg") no-repeat center center/cover; }
+    background: url("../img/members/harith -hero.jpg") no-repeat 35% center/cover; }
 
 #contact {
   background: rgba(0, 0, 0, 0.6);
