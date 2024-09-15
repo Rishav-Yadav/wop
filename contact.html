@@ -50,11 +50,15 @@
     <section id="contact" class="py-4 txt-center">
       <div class="container">
         <h2>Join Our Squad</h2>
-        <form action="join.php" class="my-3">
-          <input type="text" placeholder="Enter Your Name" />
-          <input type="text" placeholder="Enter Your ML ID" />
-          <input type="text" placeholder="Enter Your WhatsApp Number" />
-          <input type="email" placeholder="Enter Your Email" />
+        <form name="join" method="POST" netlify class="my-3">
+          <input name="Name" type="text" placeholder="Enter Your Name" />
+          <input name="ML ID" type="text" placeholder="Enter Your ML ID" />
+          <input
+            name="Number"
+            type="text"
+            placeholder="Enter Your WhatsApp Number"
+          />
+          <input name="Email" type="email" placeholder="Enter Your Email" />
           <button class="btn btn-primary my-4" type="submit">Join Us</button>
         </form>
       </div>
